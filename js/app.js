@@ -1,14 +1,16 @@
 
-var url = window.location.url;
+var url = window.location.href;
 var swLocation = '/PWA/sw.js';
 
 
 if (navigator.serviceWorker){
-    
+    /* console.log('url:')
+    console.log(window.location.url); */
     if(url.includes('localhost')){
-        swLocation = '/sw.js'
+        swLocation = 'sw.js'
     }
     navigator.serviceWorker.register(swLocation);
+    //navigator.serviceWorker.register('sw.js');
 }
 
 // Referencias de jQuery
