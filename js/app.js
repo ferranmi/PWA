@@ -1,13 +1,13 @@
 
 var url = window.location.href;
-var swLocation = '/PWA/sw.js';
+var swLocation = '/twittor/sw.js';
 
 
 if ( navigator.serviceWorker ) {
 
 
     if ( url.includes('localhost') ) {
-        swLocation = 'sw.js';
+        swLocation = '/sw.js';
     }
 
 
@@ -141,3 +141,44 @@ postBtn.on('click', function() {
     crearMensajeHTML( mensaje, usuario );
 
 });
+
+
+/* // Crear mapa en el modal
+function mostrarMapaModal(lat, lng) {
+
+    $('.modal-mapa').remove();
+    
+    var content = `
+            <div class="modal-mapa">
+                <iframe
+                    width="100%"
+                    height="250"
+                    frameborder="0"
+                    src="https://www.google.com/maps/embed/v1/view?key=${ googleMapKey }&center=${ lat },${ lng }&zoom=17" allowfullscreen>
+                    </iframe>
+            </div>
+    `;
+
+    modal.append( content );
+}
+
+
+// Sección 11 - Recursos Nativos
+
+
+// Obtener la geolocalización
+btnLocation.on('click', () => {
+
+    $.mdtoast('cargando mapa...', {
+        interaction: true,
+        interactionTimeout: 2000,
+        actionText: 'OK!'
+    });
+    navigator.geolocation.getCurrentPosition ( pos => {
+        console.log(pos);
+        mostrarMapaModal(pos.coords.latitude, pos.coords.longitude)
+    })
+    //console.log('Botón geolocalización');
+    
+
+}); */
