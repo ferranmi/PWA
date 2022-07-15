@@ -33,6 +33,8 @@ var modalAvatar = $('#modal-avatar');
 var avatarBtns  = $('.seleccion-avatar');
 var txtMensaje  = $('#txtMensaje');
 
+var btnLocation      = $('#location-btn');
+
 // El usuario, contiene el ID del héroe seleccionado
 var usuario;
 
