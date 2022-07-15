@@ -143,7 +143,7 @@ postBtn.on('click', function() {
 });
 
 
-/* // Crear mapa en el modal
+// Crear mapa en el modal
 function mostrarMapaModal(lat, lng) {
 
     $('.modal-mapa').remove();
@@ -181,4 +181,4 @@ btnLocation.on('click', () => {
     //console.log('Botón geolocalización');
     
 
-}); */
+});
